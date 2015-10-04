@@ -186,6 +186,16 @@ a:focus {
 .step:not(.active) { opacity: 0.3; }
 .step.hide:not(.active) { opacity: 0; }
 
+/*
+  Add importance to some steps
+*/
+.step.big {
+    width: 1000px;
+    text-align: center;
+    display: block;
+    font-size: 100px;
+    line-height: 150px;
+}
 
 /*
   center text in this slide
@@ -291,30 +301,6 @@ a:focus {
 
 #title .footnote {
     font-size: 32px;
-}
-
-/*
-    Second step is nothing special, just a text with a link, so it doesn't need
-    any special styling.
-
-    Let's move to 'big thoughts' with centered text and custom font sizes.
-*/
-#big {
-    width: 600px;
-    text-align: center;
-    font-size: 60px;
-    line-height: 1;
-}
-
-#big b {
-    display: block;
-    font-size: 100px;
-    line-height: 250px;
-}
-
-#big .thoughts {
-    font-size: 90px;
-    line-height: 150px;
 }
 
 /*
