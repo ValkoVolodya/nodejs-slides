@@ -202,6 +202,25 @@ a:focus {
 */
 .step.center{text-align: center;}
 
+.step.left{text-align: left;}
+
+/*
+  pretty code blocks
+*/
+pre {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    font-size: 100%;
+    line-height: 100%;
+}
+
+code {
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+    font-size: 100%;
+    line-height: 100%;
+
+}
+
+
 /*
     ... and we enhance the styles for impress.js.
 
