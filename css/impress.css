@@ -180,6 +180,7 @@ a:focus {
     line-height: 1.5;
 }
 
+
 /*
   fade out inactive slides
 */
@@ -204,6 +205,8 @@ a:focus {
 
 .step.left{text-align: left;}
 
+.step.wide{width: auto;}
+
 /*
   pretty code blocks
 */
@@ -217,6 +220,10 @@ code {
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
     font-size: 100%;
     line-height: 100%;
+}
+
+#codesize {
+  font-size: 24px;
 
 }
 
