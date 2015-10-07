@@ -215,11 +215,42 @@ https://deb.nodesource.com/setup_4.x
       <div class="step big center" data-x="-3300" data-y="200" data-rotate-z="90" data-scale="0.5">
         Examples?
       </div>
-      <div class="step center" data-x="-3300" data-y="-200" data-z="-600" data-rotate-z="90" data-scale="0.4">
+      <div class="step center" data-x="-3200" data-y="-200" data-z="-600" data-rotate-z="90" data-scale="0.4">
+        Command promt <br> echo
+      </div>
+      <div class="step left hide" data-x="-3200" data-y="-200" data-z="-600" data-rotate-z="90" data-rotate-x="90" data-scale="0.4">
+<pre class="prettyprint linenums"><code id="codesize">for(i = 2; i < process.argv.length; i++){
+  process.stdout.write(process.argv[i]);
+  process.stdout.write(" ");
+}
+process.stdout.write('\n');</code></pre>
+      </div>
+      <div class="step center" data-x="-3400" data-y="-200" data-z="-600" data-rotate-z="90" data-scale="0.4">
+        Asynchronous
+      </div>
+      <div class="step left wide hide" data-x="-3400" data-y="-200" data-z="-600" data-rotate-z="90" data-rotate-x="90" data-scale="0.4">
+<pre class="prettyprint linenums"><code id="codesize">var results = [];
+setTimeout(function() {
+  console.log("Task 1");
+  results[0] = 1;
+  setTimeout(function() {
+    console.log("Task 2");
+    results[1] = 2;
+    setTimeout(function() {
+      console.log("Task 3");
+      results[2] = 3;
+    }, 10000);
+  }, 800);
+}, 100);</code></pre>
+      </div>
+      <div class="step center hide" data-x="-3800" data-y="-200" data-z="-600" data-rotate-z="90" data-scale="0.4">
+        <img src="assets/xzibit.jpg">
+      </div>
+      <div class="step center" data-x="-3400" data-y="600" data-z="-600" data-rotate-z="90" data-scale="0.4">
         HTTP Server
       </div>
-      <div class="step left hide" data-x="-3300" data-y="-200" data-z="-600" data-rotate-z="90" data-rotate-x="90" data-scale="0.4">
-<pre class="prettyprint linenums"><code id="codesize">// Include http module.
+      <div class="step left wide hide" data-x="-3400" data-y="600" data-z="-600" data-rotate-z="90" data-rotate-x="90" data-scale="0.4">
+        <pre class="prettyprint linenums"><code id="codesize">// Include http module.
 var http = require("http");
 // Create the server.
 http.createServer(function(request, response) {
@@ -228,18 +259,16 @@ http.createServer(function(request, response) {
   response.write("Hello World from server");
   //End of response
   response.end();
-  // Listen on the 8888 port.
 }).listen(8888);
 </code></pre>
       </div>
-      <div class="step center" data-x="-3300" data-y="600" data-z="-600" data-rotate-z="90" data-scale="0.4">
-        Reading and Writing Files
+      <div class="step center" data-x="-3200" data-y="600" data-z="-600" data-rotate-z="90" data-scale="0.4">
+        File I/O
       </div>
-      <div class="step left wide hide" data-x="-3300" data-y="600" data-z="-600" data-rotate-z="90" data-rotate-x="90" data-scale="0.4">
-<pre  id="codesize" class="prettyprint linenums"><code>var http = require("http"),
+      <div class="step left wide hide" data-x="-3200" data-y="600" data-z="-600" data-rotate-z="90" data-rotate-x="90" data-scale="0.4">
+        <pre class="prettyprint linenums" id="codesize"><code>var http = require("http"),
 // And file system module
 fs = require("fs");
-
 http.createServer(function (request, response) {
 	// Check if user requests /
 	if (request.url == '/') {
@@ -254,7 +283,8 @@ http.createServer(function (request, response) {
 			// Write incremented number to file.
 			fs.writeFile('test.txt', data);
 			// End response with some nice message.
-			response.end('This page was refreshed ' + data + ' times!');
+			response.end('This page was refreshed ' + data +
+       ' times!');
 		});
 	} else {
 		// Indicate that requested file was not found.
@@ -262,12 +292,12 @@ http.createServer(function (request, response) {
 		// And end request without sending any data.
 		response.end();
 	}
-}).listen(8888);</code></pre>
+}).listen(8888);
+</code></pre>
       </div>
       <div class="step big center" data-x="-3300" data-y="200" data-rotate-z="90" data-scale="0.5">
         Examples?
       </div>
-
 
       <!-- Overview slide -->
 			<div id="overview" class="step" data-x="0" data-y="0" data-scale="5">
