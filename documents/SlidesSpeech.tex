@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english,ukrainian]{babel}
+\setcounter{secnumdepth}{0}
+\title{\LARGE{Intro to node.js}}
+\author{Volodya Valko}
+\date{October 2015}
+\begin{document}
+  \maketitle
+  \section{JavaScript}
+    \subsection{Using JS on a front-end and back-end}
+      Використання JS як на фронт-енді, так і на бек-енді зменшує невідповідності
+      між середовищами, а також дозволяє розподілити деяку логіку між клієнтом та
+      сервером(наприклад перевірку форм).
+    \subsection{JSON}
+      Не потрібно кастити об’єкти з бек-енду щоб відправити на фронт і навпаки.
+      Все має єдиний формат JSON.
+    \subsection{People already know it}
+      JavaScript --- це бе перебільшення найбільш популярна мова програмування,
+      навіть люди, які не є програмістами можуть знати JS. А якщо навіть котрийсь
+      брутальний бекендщик все життя писав на PHP чи Ruby, то node.js стане
+      поштовхом для вивченя JS.
+  \section{Event-driven development}
+    \subsection{Async code}
+      Все побудовано на принципах асинхронності, ми нічого не чекаємо, а йдемо напролом
+    \subsection{No multithreading, deadlocks}
+      Немає жодних проблем зв’язаних з багатопоточністю(але з’являються нові, та
+      про це трохи пізніше)
+    \subsection{Single thread for your code}
+      node.js виконує весь ваш код в одному потоці, а ішу роботу в багато потоків
+      (тут має бути наочний приклад, який довго описувати)
+  \section{Extremily Fast}
+    \subsection{V8 Engine}
+      Побудований на швидкому V8 як і Chrome
+    \subsection{Optimized for hight concurrent environments}
+      Легко масштабувати до тисяч активих з’єднань. Дуже швидкий та ефективний. Може
+      в десятки разів зменшити кількість серверних ресурсів в порівнянні з Ruby чи PHP
+  \section{npm}
+    \subsection{Huge community with tons of great libraries}
+      Коли ви бачите ці три маленькі букви --- уявляйте собі лавину --- приблизно
+      так розвивається дана спільнота. Все у вільному доступі і лежить на відстані
+      однієї команди в терміналі
+    \subsection{Five versions of everything}
+      Жодних стандартів тут немає. Ваш досвід та враження від написання коду в
+      більшості визначаються вибраними вами бібліотеками, фреймами та модулями
+  \section{npm must-have modules}
+    \subsection{Asynchronous}
+      Всі модулі даного розділу покликані звільнити вас від 20 рівнів асинхронних викликів
+    \subsection{Web}
+      Фреймворки даного розділу спрощують життя і включають в себе template engine
+    \subsection{Testing}
+      Без фреймворків даного типу в JS далеко не заїдеш. Наша улюблена асинхронність
+      та специфіка самого JS робить перевірки дебагом практично повністю неефективними
+  \section{Why I write this}
+      Це доповідь для презентації під назвою 'Intro to node.js' яку ви можете
+      знайти за \href{http://valkovolodya.github.io/nodejs-slides/}{посиланням}.
+      Також, ви можете знайти сирцевий код презентації та цього документу за
+      \href{https://github.com/ValkoVolodya/nodejs-slides}{посиланням}.
+\end{document}
